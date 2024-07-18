@@ -1,0 +1,137 @@
+#设置改变配置自动启动
+live_config_reload = true
+
+#自动复制到剪切板
+selection = { save_to_clipboard = true}
+
+#隐藏鼠标
+mouse = { hide_when_typing = true }
+
+#改变窗口设置
+[window]
+#窗口大小
+dimensions = { columns = 0, lines = 0 }
+position = { x = 0, y = 0 }
+padding = { x = 0, y = 0 }
+dynamic_padding = false
+#窗口装饰 none无边框和标题栏
+decorations = "none"
+#开启默认最大化
+startup_mode = "Maximized"
+#透明度
+opacity = 0.9
+#窗口名字
+title = "Alacritty"
+
+#字体
+[font]
+normal = { family = "Hack Nerd Font", style = "Regular" }
+bold = { family = "Hack Nerd Font", style = "Bold" }
+italic = { family = "Hack Nerd Font", style = "Italic" }
+bold_italic = { family = "Hack Nerd Font", style = "Bold Italic" }
+size = 12.0
+offset = { x = 0, y = 0 }
+glyph_offset = { x = 0, y = 0 }
+
+#粗体为高亮
+# draw_bold_text_with_bright_colors = true
+
+[scrolling]
+history = 50000
+
+
+#光标
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+vi_mode_style = "Block"
+blink_interval = 600
+thickness = 0.1
+
+[terminal]
+#设定复制黏贴行为 默认只能复制
+osc52 = "CopyPaste"
+
+[colors.primary]
+background = "0x282a36"
+foreground = "0xf8f8f2"
+
+[colors.cursor]
+text = "CellBackground"
+cursor = "CellForeground"
+
+[colors.vi_mode_cursor]
+text = "CellBackground"
+cursor = "CellForeground"
+
+[colors.search.matches]
+foreground = "0x44475a"
+background = "0x50fa7b"
+
+[colors.search.focused_match]
+foreground = "0x44475a"
+background = "0xffb86c"
+
+[colors]
+footer_bar = { background = "0x282a36", foreground = "0xf8f8f2" }
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+[colors.selection]
+text = "CellForeground"
+background = "0x44475a"
+
+[colors.normal]
+black = "0x000000"
+red = "0xff5555"
+green = "0x50fa7b"
+yellow = "0xf1fa8c"
+blue = "0xbd93f9"
+magenta = "0xff79c6"
+cyan = "0x8be9fd"
+white = "0xbfbfbf"
+
+[colors.bright]
+black = "0x4d4d4d"
+red = "0xff6e67"
+green = "0x5af78e"
+yellow = "0xf4f99d"
+blue = "0xcaa9fa"
+magenta = "0xff92d0"
+cyan = "0x9aedfe"
+white = "0xe6e6e6"
+
+[colors.dim]
+black = "0x14151b"
+red = "0xff2222"
+green = "0x1ef956"
+yellow = "0xebf85b"
+blue = "0x4d5b86"
+magenta = "0xff46b0"
+cyan = "0x59dffc"
+white = "0xe6e6d1"
+
+#快捷键
+[keyboard]
+bindings = [
+    {key = "Back", action = "ReceiveChar"},
+    {key = "Key0", mods = "Command", action = "ResetFontSize"},
+    {key = "Equals", mods = "Command", action = "IncreaseFontSize"},
+    {key = "Plus", mods = "Command", action = "IncreaseFontSize"},
+    {key = "NumpadAdd", mods = "Command", action = "IncreaseFontSize"},
+    {key = "Minus", mods = "Command", action = "DecreaseFontSize"},
+    {key = "NumpadSubtract", mods = "Command", action = "DecreaseFontSize"},
+    {key = "V", mods = "Command", action = "Paste"},
+    {key = "C", mods = "Command", action = "Copy"},
+    {key = "C", mods = "Command", mode = "Vi|~Search", action = "ClearSelection"},
+    {key = "H", mods = "Command", action = "Hide"},
+    {key = "M", mods = "Command", action = "Minimize"},
+    {key = "Q", mods = "Command", action = "Quit"},
+    {key = "W", mods = "Command", action = "Quit"},
+    {key = "N", mods = "Command", action = "SpawnNewInstance"},
+    {key = "F", mods = "Command|Control", action = "ToggleFullscreen"},
+    {key = "F", mods = "Command", mode = "~Search", action = "SearchForward"},
+    {key = "B", mods = "Command", mode = "~Search", action = "SearchBackward"},
+]
+
